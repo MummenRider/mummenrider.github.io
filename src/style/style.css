@@ -1,0 +1,614 @@
+/************************ START OF GLOBAL VARIABLES/ UTILITY HELPER SECTION *************************/
+:root {
+  --clr-hero-bkg: #d3d7f4;
+  --clr-primary: #263d77;
+  --clr-primary-700: #283b5a;
+  --clr-accent: #576589;
+  --clr-black-accent: #3a3a3b;
+  --clr-hr: #b3c0e2;
+
+  --ff-primary: "Montserrat", sans-serif;
+  --ff-sub-header: "BenchNine", sans-serif;
+  --ff-content: "Esteban", serif;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+*,
+*::before,
+*::after {
+  list-style: none;
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+.text-center {
+  text-align: center;
+}
+.split-proj,
+.split {
+  display: flex;
+  flex-direction: column;
+}
+
+.project-header-section .container,
+.about-header-section .container {
+  position: relative;
+}
+.container {
+  width: 90%;
+  margin: auto;
+}
+.project-header-section h2,
+.about-header-section h2,
+.contact-header-section h2 {
+  font-family: var(--ff-sub-header);
+  font-size: 2.8rem;
+  max-width: 112px;
+  width: 30%;
+  margin: auto;
+}
+.project-header-section h2::before,
+.about-header-section h2::before,
+.contact-header-section h2::before {
+  content: "";
+  position: absolute;
+  display: inline;
+  top: 50%;
+  right: 0px;
+  z-index: -100;
+  width: 100%;
+  padding: 0.09rem;
+}
+/************************ END OF GLOBAL VARIABLES/ UTILITY HELPER SECTION *************************/
+
+/************************ START OF NAV SECTION *************************/
+nav {
+  display: flex;
+  width: 90%;
+  max-height: 10vh;
+  margin: auto;
+  justify-content: space-between;
+  align-items: center;
+  padding: 3rem 0;
+}
+
+.nav-links,
+.sub-nav-links {
+  display: none;
+}
+.burger > div {
+  width: 3rem;
+  padding: 0.15rem;
+  background-color: var(--clr-primary);
+  margin: 0.3rem 0;
+}
+/************************ END OF NAV SECTION *************************/
+
+/************************ START OF HERO SECTION *************************/
+.hero-section .container {
+  position: relative;
+  width: 90%;
+  margin: 3rem auto;
+  background-color: var(--clr-hero-bkg);
+}
+.hero-section .container::before {
+  content: "";
+  text-align: center;
+  background-image: url(/img/circle-avatar.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  position: absolute;
+  padding: 5.3rem;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  background-color: white;
+}
+
+.split-hero {
+  padding-top: 7rem;
+  margin: auto;
+}
+
+.hero-content h1 {
+  font-family: var(--ff-primary);
+  font-size: 4rem;
+  line-height: 4.4rem;
+  letter-spacing: -1.8px;
+  font-weight: 500;
+  color: var(--clr-black-accent);
+  text-align: center;
+  width: 80%;
+  max-width: 33.6rem;
+  margin: auto;
+}
+.hero-content p {
+  font-family: var(--ff-primary);
+  font-size: 1.5rem;
+  line-height: 26px;
+  letter-spacing: 0.6px;
+  padding-top: 8rem;
+  padding-bottom: 5rem;
+  margin: auto;
+  width: 90%;
+  max-width: 46rem;
+}
+
+mark.bold-blue {
+  color: var(--clr-primary);
+  font-weight: 700;
+  background: none;
+}
+.split-hero img {
+  display: none;
+}
+
+/***************************************** END OF HERO SECTION *******************************************/
+
+/************************ START OF PROJECTS SECTION *************************/
+.project-header-section h2 {
+  background-color: white;
+  color: var(--clr-primary);
+}
+.project-header-section h2::before {
+  background-color: var(--clr-hr);
+}
+.project-ht-section {
+  margin: 3rem 0;
+}
+
+.project-lgp-section {
+  margin-top: 6rem;
+  margin-bottom: 5rem;
+}
+
+.project-ht-section .container,
+.project-lgp-section .container {
+  width: 90%;
+  margin: auto;
+}
+.project-ht-section h3,
+.project-lgp-section h3 {
+  font-family: var(--ff-primary);
+  font-weight: 500;
+  font-size: 1.6rem;
+  color: var(--clr-primary);
+}
+.desk-img {
+  display: none;
+}
+.project-ht-section p,
+.project-lgp-section p {
+  font-family: var(--ff-primary);
+  font-size: 1.4rem;
+  letter-spacing: 0.03em;
+  line-height: 2rem;
+  font-weight: 300;
+  padding: 1rem 0;
+  width: 100%;
+  max-width: 54rem;
+}
+.project-ht-section img,
+.project-lgp-section img {
+  width: 100%;
+  height: 100%;
+  max-width: 53.4rem;
+  max-height: 31.6rem;
+  object-fit: cover;
+}
+
+/************************ END OF PROJECTS SECTION *************************/
+
+/************************ START OF ABOUT ME SECTION *************************/
+.about-header-section {
+  position: relative;
+  z-index: -100;
+  background-color: var(--clr-primary-700);
+  padding-top: 2.4rem;
+}
+.about-header-section h2 {
+  background-color: var(--clr-primary-700);
+  color: white;
+}
+.about-header-section h2::before {
+  background-color: white;
+}
+.about-me-section {
+  background-color: var(--clr-primary-700);
+  color: white;
+  font-family: var(--ff-primary);
+}
+
+.about-me-section .container .split {
+  display: flex;
+  flex-direction: column;
+  padding: 3rem 0;
+  gap: 3rem;
+}
+
+.about-me-section h3 {
+  font-weight: 500;
+  font-size: 1.7rem;
+  padding: 1rem 0;
+}
+.about-me-section p {
+  font-size: 1.4rem;
+  letter-spacing: 0.03em;
+  line-height: 2rem;
+  font-weight: 300;
+}
+.abt-me-avatar {
+  display: none;
+}
+/************************ END OF ABOUT ME SECTION *************************/
+
+/************************ START OF CONTACT SECTION *************************/
+.contact-header-section {
+  margin: 2rem auto;
+  position: relative;
+  z-index: -100;
+  width: 90%;
+}
+.contact-header-section h2 {
+  background-color: white;
+  color: var(--clr-primary);
+}
+.contact-header-section h2::before {
+  background-color: var(--clr-hr);
+}
+
+.contact-section .container {
+  background-color: var(--clr-hero-bkg);
+  border-radius: 1.2rem;
+  padding: 3rem 2rem 0 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 90%;
+  max-width: 69rem;
+}
+.contact-form {
+  font-family: var(--ff-primary);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  max-width: 57rem;
+}
+.field-name,
+.field-em {
+  position: relative;
+  font-size: 1.4rem;
+  padding-top: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.field-message {
+  position: relative;
+  font-size: 1.4rem;
+  padding-top: 1rem;
+  margin-top: 0.5rem;
+}
+input,
+textarea {
+  background: white;
+  border: 0.2rem solid #ddd;
+  padding: 1.2rem;
+  border-radius: 0.3rem;
+  width: 100%;
+
+  outline: none;
+}
+
+.field-name .name-placeholder,
+.field-em .em-placeholder {
+  position: absolute;
+  left: 1.2rem;
+  top: calc(50% + 1rem);
+  transform: translateY(-50%);
+  color: lightslategrey;
+  transition: top 300ms ease, font-size 300ms ease, color 300ms ease;
+}
+
+.field-message .message-placeholder {
+  position: absolute;
+  left: 1.2rem;
+  top: calc(12% + 2rem);
+  transform: translateY(-100%);
+  color: lightslategrey;
+  transition: top 300ms ease, font-size 300ms ease, color 300ms ease;
+}
+
+.field-name input:valid,
+.field-name input:focus,
+.field-em input:valid,
+.field-em input:focus,
+.field-message textarea:valid,
+.field-message textarea:focus {
+  border-color: var(--clr-primary);
+}
+
+.field-em input:valid + .em-placeholder,
+.field-em input:focus + .em-placeholder {
+  top: 1rem;
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--clr-black-accent);
+}
+
+.field-name input:valid + .name-placeholder,
+.field-name input:focus + .name-placeholder,
+.field-message textarea:valid + .message-placeholder,
+.field-message textarea:focus + .message-placeholder {
+  top: 1rem;
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--clr-black-accent);
+}
+.container-btn {
+  width: 90%;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 3rem 0;
+}
+button {
+  padding: 1rem 5rem;
+  border-radius: 2.5rem;
+  border: none;
+  background-color: var(--clr-primary);
+  color: white;
+  font-family: var(--ff-primary);
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+footer {
+  background-color: rgb(22, 22, 22);
+  color: rgb(105, 104, 104);
+  padding: 3rem 0;
+  margin-top: 5rem;
+}
+footer h4 {
+  font-family: var(--ff-primary);
+  font-size: 1.2rem;
+  font-weight: 300;
+}
+/************************ END OF CONTACT SECTION *************************/
+@media (min-width: 768px) {
+  .burger {
+    display: none;
+  }
+
+  .nav-links,
+  .sub-nav-links {
+    display: flex;
+  }
+  .nav-links {
+    display: flex;
+    width: 45%;
+    max-width: 50rem;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .nav-links a {
+    font-family: var(--ff-primary);
+    font-size: 1.3rem;
+    font-weight: 500;
+    text-decoration: none;
+    letter-spacing: 0.019rem;
+    color: var(--clr-primary);
+  }
+
+  .sub-nav-links {
+    display: flex;
+    width: 9%;
+    max-width: 96px;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .sub-nav-links a {
+    color: var(--clr-accent);
+    font-size: 1.5rem;
+    text-decoration: none;
+  }
+  .mobile-img {
+    display: none;
+  }
+  .desk-img {
+    display: block;
+  }
+  .split-proj {
+    display: flex;
+    flex-direction: row;
+  }
+  .split-proj > * {
+    flex: 1 1 100%;
+  }
+  .split-proj > * + * {
+    margin-left: 3rem;
+  }
+  .ht-content,
+  .lgp-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  /* .project-ht-section img,
+.project-lgp-section img {
+  width: 100%;
+  height: 100%;
+  max-height: 31.6rem;
+  object-fit: cover;
+} */
+}
+
+@media (min-width: 812px) {
+  .hero-section .container::before {
+    display: none;
+  }
+  .split-hero {
+    display: flex;
+    width: 90%;
+    max-width: 1800px;
+  }
+  .hero-content h1 {
+    font-size: 4rem;
+    text-align: left;
+    line-height: 4.4rem;
+  }
+  .hero-content p {
+    font-size: 1.5rem;
+    line-height: 2.5rem;
+    text-align: left;
+    width: 73%;
+    padding: 5rem 0 7rem 0;
+    position: relative;
+  }
+  .split-hero img {
+    display: block;
+    position: absolute;
+    top: -15%;
+    right: -5%;
+    width: 40rem;
+  }
+}
+@media (min-width: 896px) {
+  .nav-links a {
+    font-size: 1.4rem;
+  }
+
+  .about-me-section .container .split {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .about-me-section .container .split > * {
+    flex: 1 1 100%;
+  }
+}
+@media (min-width: 1224px) {
+  .nav-links a {
+    font-size: 1.7rem;
+    font-weight: 500;
+  }
+  .hero-section {
+    height: 90vh;
+  }
+
+  .hero-section {
+    max-height: 90vh;
+  }
+  .hero-content {
+    width: 60%;
+  }
+  .hero-content h1 {
+    max-width: 66rem;
+    font-size: 6.5rem;
+    line-height: 6.6rem;
+    margin: 0;
+  }
+  .hero-content p {
+    font-size: 2rem;
+    line-height: 3.4rem;
+    margin: 0;
+    max-width: 60rem;
+    padding: 14rem 0rem 11rem 0rem;
+  }
+  .split-hero img {
+    width: 60rem;
+  }
+  .ht-content h3,
+  .lgp-content h3 {
+    font-size: 2rem;
+  }
+  .ht-content p,
+  .lgp-content p {
+    font-size: 1.6rem;
+    line-height: 2.8rem;
+    letter-spacing: 0.14rem;
+  }
+  .about-me-section {
+    position: relative;
+    padding-bottom: 4rem;
+  }
+  .about-me-section .container {
+    max-width: 150rem;
+  }
+
+  .about-me-section h3 {
+    font-size: 2rem;
+    font-weight: 500;
+  }
+
+  .about-me-section p {
+    max-width: 30rem;
+    font-size: 1.6rem;
+    line-height: 2.8rem;
+    letter-spacing: 0.14rem;
+  }
+  .abt-me-avatar {
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 20%;
+  }
+  .abt-me-avatar img {
+    width: 12rem;
+  }
+}
+
+@media (min-width: 1400px) {
+  .hero-content h1 {
+    max-width: 70rem;
+    font-size: 7rem;
+    text-align: left;
+    line-height: 8rem;
+  }
+  .hero-content p {
+    font-size: 2.3rem;
+    line-height: 3.4rem;
+    padding: 14rem 0rem 8rem 0rem;
+  }
+  .split-hero img {
+    width: 64rem;
+  }
+}
+
+@media (min-width: 1824px) {
+  .hero-section .container {
+    padding-bottom: 3rem;
+  }
+
+  .hero-content {
+    width: 60%;
+    margin-top: 5rem;
+    margin-left: 100px;
+  }
+  .hero-content p {
+    letter-spacing: 2.3px;
+
+    max-width: 100rem;
+    padding: 14rem 0rem 10rem 0rem;
+  }
+  .split-hero img {
+    width: 75rem;
+    top: -13%;
+  }
+
+  .project-ht-section .container,
+  .project-lgp-section .container {
+    display: flex;
+    justify-content: center;
+  }
+  .split-proj > * + * {
+    margin-left: 20rem;
+  }
+}
