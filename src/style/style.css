@@ -73,7 +73,7 @@ nav {
   max-height: 10vh;
   margin: auto;
   justify-content: space-between;
-  align-items: center;
+  align-items: left;
   padding: 3rem 0;
 }
 
@@ -81,6 +81,27 @@ nav {
 .sub-nav-links {
   display: none;
 }
+
+.nav-links a {
+  position: relative;
+}
+.nav-links a::after {
+  content: "";
+  background-color: var(--clr-primary-700);
+  position: absolute;
+  width: 100%;
+  padding: 0.1rem;
+  bottom: 0;
+  left: 0;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 250ms ease-in;
+}
+.nav-links a:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
 .burger > div {
   width: 3rem;
   padding: 0.15rem;
@@ -499,12 +520,9 @@ footer h4 {
     font-size: 1.7rem;
     font-weight: 500;
   }
-  .hero-section {
-    height: 90vh;
-  }
 
   .hero-section {
-    max-height: 90vh;
+    min-height: 90vh;
   }
   .hero-content {
     width: 60%;
