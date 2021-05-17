@@ -380,19 +380,29 @@ textarea {
 
 .field-name input:valid,
 .field-name input:focus,
-.field-em input:valid,
+.field-em input.dirty,
 .field-em input:focus,
 .field-message textarea:valid,
 .field-message textarea:focus {
   border-color: var(--clr-primary);
 }
 
-.field-em input:valid + .em-placeholder,
+.field-em small,
+.field-name small,
+.field-message small {
+  visibility: hidden;
+}
+.field-em.error small {
+  visibility: visible;
+  color: red;
+}
+
+.field-em input.dirty + .em-placeholder,
 .field-em input:focus + .em-placeholder {
   top: 1rem;
   font-size: 1rem;
   font-weight: 500;
-  color: var(--clr-black-accent);
+  color: var(--clr-primar);
 }
 
 .field-name input:valid + .name-placeholder,
