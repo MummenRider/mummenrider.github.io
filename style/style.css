@@ -372,7 +372,7 @@ textarea {
 .field-message .message-placeholder {
   position: absolute;
   left: 1.2rem;
-  top: calc(12% + 2rem);
+  top: calc(13% + 1.8rem);
   transform: translateY(-100%);
   color: lightslategrey;
   transition: top 300ms ease, font-size 300ms ease, color 300ms ease;
@@ -387,16 +387,6 @@ textarea {
   border-color: var(--clr-primary);
 }
 
-.field-em small,
-.field-name small,
-.field-message small {
-  visibility: hidden;
-}
-.field-em.error small {
-  visibility: visible;
-  color: red;
-}
-
 .field-em input.dirty + .em-placeholder,
 .field-em input:focus + .em-placeholder {
   top: 1rem;
@@ -406,10 +396,16 @@ textarea {
 }
 
 .field-name input:valid + .name-placeholder,
-.field-name input:focus + .name-placeholder,
+.field-name input:focus + .name-placeholder {
+  top: 1rem;
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--clr-black-accent);
+}
+
 .field-message textarea:valid + .message-placeholder,
 .field-message textarea:focus + .message-placeholder {
-  top: 1rem;
+  top: 0.8rem;
   font-size: 1rem;
   font-weight: 500;
   color: var(--clr-black-accent);
