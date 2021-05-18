@@ -577,6 +577,13 @@ footer h4 {
     font-size: 1.8rem;
     line-height: 3rem;
   }
+  .project-header-section h2,
+  .about-header-section h2,
+  .contact-header-section h2 {
+    font-family: var(--ff-sub-header);
+    font-size: 3rem;
+    max-width: 140px;
+  }
   .ht-content h3,
   .lgp-content h3 {
     font-size: 2rem;
@@ -622,7 +629,7 @@ footer h4 {
     padding: 0 3rem;
   }
   .hero-section {
-    padding: 5rem 10rem 10rem 10rem;
+    padding: 5rem 10rem 12rem 10rem;
   }
   .hero-section .container {
     padding: 0rem 4rem 4rem 0;
